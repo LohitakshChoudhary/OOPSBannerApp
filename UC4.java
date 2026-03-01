@@ -1,44 +1,17 @@
-public class UC4 {
+public class UC4{
     public static void main(String[] args) {
 
-        String[][] banner = {
-            {
-                "  ***  ",
-                " *   * ",
-                " *   * ",
-                " *   * ",
-                "  ***  "
-            },
-            {
-                "  ***  ",
-                " *   * ",
-                " *   * ",
-                " *   * ",
-                "  ***  "
-            },
-            {
-                " ****  ",
-                " *   * ",
-                " ****  ",
-                " *     ",
-                " *     "
-            },
-            {
-                "  ***  ",
-                " *     ",
-                "  ***  ",
-                "     * ",
-                "  ***  "
-            }
-        };
+        String[] lines = new String[5];
 
-        int rows = 5;
+        lines[0] = String.join("", "  ***  ", " ", "  ***  ", " ", " ****  ", " ", "  ***  ");
+        lines[1] = String.join("", " *   * ", " ", " *   * ", " ", " *   * ", " ", " *     ");
+        lines[2] = String.join("", " *   * ", " ", " *   * ", " ", " ****  ", " ", "  ***  ");
+        lines[3] = String.join("", " *   * ", " ", " *   * ", " ", " *     ", " ", "     * ");
+        lines[4] = String.join("", "  ***  ", " ", "  ***  ", " ", " *     ", " ", "  ***  ");
 
-        for (int row = 0; row < rows; row++) {
-            for (String[] letter : banner) {
-                System.out.print(letter[row] + "  ");
-            }
-            System.out.println();
+        for (String line : lines) {
+            System.out.println(line);
         }
     }
 }
+
